@@ -1,17 +1,20 @@
 #include <Servo.h>
 
-Servo cameraservo;
-Servo gunservo;
-Servo triggerservo;
+//define the servo names
+
+Servo cameraservo; //servo to control the camera
+Servo gunservo; //servo to control elastic band gun movement
+Servo triggerservo; //servo to fire the elastic band gun
 
 String readString, n1, n2, n3;
 
-//Attached Pin Number for each servo format is servo.attach(pin) 
+//Attached Pin Number for each servo format is servo.attach(pin) wiring the servo Using some single strand hook up wire, connect the black wire to one of the Arduino 0V pins.
+//Connect the red wire (center wire) to the Arduino 5V pin. And finally connect the orange/white wire to pin number.
 
 void setup() {
-  cameraservo.attach(2);
-  gunservo.attach(3);
-  triggerservo.attach(4);
+  cameraservo.attach(2); //servo on digital pin 2
+  gunservo.attach(3); //servo on digital pin 2
+  triggerservo.attach(4); //servo on digital pin 4
   Serial.begin(9600);
 }
 
@@ -51,6 +54,7 @@ void loop() {
      n3.toCharArray(carray3, sizeof(carray3));
      pos3 = atoi(carray3);
      
+     //turning the servo to the positios 
      cameraservo.write(pos1);
      triggerservo.write(pos2);
      gunservo.write(pos3);
