@@ -1,10 +1,11 @@
+#Code to manage the API service call to Microsoft Cogntive Services 
+
 from __future__ import print_function
 import requests
 import time
 
-
 _url = "https://api.projectoxford.ai/emotion/v1.0/recognize"
-_key = "b3cb7d20e5d9488199615e7a27a77c14"
+_key = "Insert your Cognitive Services Emotion Key"
 _maxNumRetries = 10
 
 

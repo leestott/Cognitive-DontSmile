@@ -1,3 +1,5 @@
+## Code to control the servo motors for the elastic band gun 
+
 from __future__ import print_function
 from time import sleep
 
@@ -27,7 +29,6 @@ class Driver:
     def face(self, servo, position):
         """
         Sets the position of a servo
-
         :param servo: which servo (CAMERA, GUN or TRIGGER)
         :param position: position in degrees
         """

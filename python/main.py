@@ -1,3 +1,5 @@
+#Main Application for Dont Shoot me, Microsoft Cognitive Services Hack around Emotion API - Register for the API at http://aka.ms/cognitive
+
 from __future__ import print_function
 from operator import itemgetter
 from os import environ
@@ -21,6 +23,8 @@ NEUTRAL = 0
 SCARED = JOLLY = 1
 TERRIFIED = ECSTATIC = 2
 
+#Set the mode of what emotion to target 
+
 HAPPY_MODE = True
 
 
@@ -30,6 +34,8 @@ def judge(face):
 
        :param face: Face object containing emotion data.
     """
+#Select the emotion score of the target
+
     if HAPPY_MODE:
         print(face.scores["happiness"])
         if face.scores["happiness"] < 0.1:

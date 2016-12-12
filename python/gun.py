@@ -1,3 +1,5 @@
+#Code to control the Elastic Band Gun movement and targeting 
+
 from __future__ import print_function
 from driver import GUN
 
