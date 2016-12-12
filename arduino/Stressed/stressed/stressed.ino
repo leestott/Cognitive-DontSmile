@@ -6,6 +6,8 @@ Servo triggerservo;
 
 String readString, n1, n2, n3;
 
+//Attached Pin Number for each servo format is servo.attach(pin) 
+
 void setup() {
   cameraservo.attach(2);
   gunservo.attach(3);
